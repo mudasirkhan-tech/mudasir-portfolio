@@ -22,7 +22,7 @@
 
 <main>
 <section class="hero" id="home">
-  <div class="hero-bg"><img src="./profile.jpg" alt="Mudasir Khan-Tech" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="mk grad">MK</div></div>
+  <div class="hero-bg"><img src="./images/profile.jpg" alt="Mudasir Khan-Tech" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="mk grad">MK</div></div>
   <div class="wrap"><div class="hero-copy">
     <div class="avail">Available for freelance projects</div>
     <p class="sub">Full-Stack AI Developer</p>
@@ -113,7 +113,7 @@
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project details"><div class="mbox"><button class="mx" id="mx" aria-label="Close">✕</button><div id="mc"></div></div></div>
 
 <script>
-/* WhatsApp digits only: country code, no + or spaces */
+/* ===== EDIT HERE: links and WhatsApp (digits only, country code, no + or spaces) ===== */
 const CFG={
  whatsapp:"923429358188",
  waText:"Hi Mudasir, I found your portfolio and I'd like to discuss a project.",
@@ -122,7 +122,7 @@ const CFG={
  fiverr:"https://www.fiverr.com/mudasirkhan_ai",
  upwork:"https://www.upwork.com/freelancers/~01a8ea6d6f2149d63a"
 };
-
+/* ===== EDIT HERE: skills ===== */
 const SKILLS=[
 ["🤖","Artificial Intelligence","AI integration, deep learning concepts and image processing, used in my chatbot projects."],
 ["💬","AI Chatbots & Bots","Conversational assistants that answer questions, handle files and images, and chat in real time."],
@@ -133,7 +133,7 @@ const SKILLS=[
 ["🔥","Firebase","Hosting and web-app support with Firebase tools."],
 ["📄","Document Q&A","Tools that let users ask questions about documents and PDF files."],
 ["🧩","Problem Solving","Step-by-step thinking and debugging to turn ideas into working software."]];
-
+/* ===== EDIT HERE: services ===== */
 const SERVICES=[
 ["🤖","AI Chatbot Development","Chatbots and AI assistants that answer questions, process images and accept file uploads.",["Customer support bots","Assistants with file and image input","Ollama and AI model integration"]],
 ["⚙️","AI Automation","Automation that removes repetitive tasks and connects your tools into one workflow.",["Task and workflow automation","Bots for platforms and messaging","Productivity tools"]],
@@ -141,21 +141,17 @@ const SERVICES=[
 ["🖥️","Desktop Applications","Desktop software for tasks that need to run on your own computer.",["Custom desktop tools","Offline-friendly apps","Simple, clear interfaces"]],
 ["🗄️","Database & Management Systems","Systems to store, search and manage business data in one place.",["Database design","Management systems","Admin dashboards"]],
 ["💼","Professional Business Websites","Websites that present your company and bring customers in to contact you.",["Service and contact pages","Clean branding","Ready for GitHub Pages or hosting"]]];
-
-/*
-  IMPORTANT: These image files must be in the repository root beside index.html:
-  profile.jpg, onyx.jpg, freelance-os.jpg, synapto.jpg
-  The repository screenshot showed these files in the root, not in an images folder.
-  Add ux.jpg, signup.jpg and velnora.jpg to the repository root before using them here.
-*/
+/* ===== EDIT HERE: projects (image paths are inside the images folder; link "" = no link button) ===== */
 const PROJECTS=[
-{t:"Onyx",c:"AI Chatbot",img:"./onyx.jpg",link:"",d:"Onyx is a professional AI chatbot. It answers questions much like ChatGPT, processes images, and lets you upload files and talk with it. It replies quickly and handles all kinds of questions.",tags:["AI chat","Image processing","File upload","Fast replies"]},
-{t:"Freelance Operating System",c:"AI Automation / Freelancing",img:"./freelance-os.jpg",link:"",d:"A system that finds work for you on Upwork and Fiverr, brings in people and links you with jobs. It also works on GitHub and LinkedIn, sharing posts on your behalf.",tags:["Upwork","Fiverr","LinkedIn","GitHub","Automation"]},
-{t:"Synapto",c:"AI Chatbot",img:"./synapto.jpg",link:"",d:"Synapto is an AI chatbot connected with Ollama. It includes AI deep learning and integration, answers questions like ChatGPT, Gemini or Claude, processes images and generates images.",tags:["Ollama","Deep learning","Image processing","Image generation"]},
-{t:"UX Project",c:"UI / UX Design",img:"./ux.jpg",link:"",d:"A user-interface project focused on a clear, consistent and easy-to-use experience.",tags:["UI/UX","User experience","Interface design"]},
-{t:"Sign-up Project",c:"Web App / UI",img:"./signup.jpg",link:"",d:"A sign-up interface designed to make account creation clear and easy for users.",tags:["Sign-up","Forms","User experience"]},
-{t:"Velnora",c:"Business Website",img:"./velnora.jpg",link:"",d:"A business website platform where you can set up your company and attract customers. Customers can contact you directly through the site.",tags:["Business website","Customer contact","Responsive"]}];
+{t:"Onyx",c:"AI Chatbot",img:"./images/onyx.jpg",link:"",d:"Onyx is a professional AI chatbot. It answers questions much like ChatGPT, processes images, and lets you upload files and talk with it. It replies quickly and handles all kinds of questions.",tags:["AI chat","Image processing","File upload","Fast replies"]},
+{t:"Freelance Operating System",c:"AI Automation / Freelancing",img:"./images/freelance-os.jpg",link:"",d:"A system that finds work for you on Upwork and Fiverr, brings in people and links you with jobs. It also works on GitHub and LinkedIn, sharing posts on your behalf.",tags:["Upwork","Fiverr","LinkedIn","GitHub","Automation"]},
+{t:"Synapto",c:"AI Chatbot",img:"./images/synapto.jpg",link:"",d:"Synapto is an AI chatbot connected with Ollama. It includes AI deep learning and integration, answers any question like ChatGPT, Gemini or Claude, processes images and generates images.",tags:["Ollama","Deep learning","Image processing","Image generation"]},
+{t:"Velnora",c:"Business Website",img:"./images/velnora.jpg",link:"",d:"A business website platform where you can set up your company and attract customers. Customers can contact you directly through the site.",tags:["Business website","Customer contact","Responsive"],logo:"velnora",glow:"#d946ef"},
+{t:"Signup",c:"Authentication / Onboarding",img:"./images/signup.jpg",link:"",d:"A sign-up and onboarding project focused on a clear, secure and welcoming account creation flow. (Edit this text with your real details.)",tags:["Sign-up flow","Authentication","Forms"],logo:"signup",glow:"#10b981"},
+{t:"UX Project",c:"UI/UX Design",img:"./images/ux.jpg",link:"",d:"A design-focused project exploring layouts, wireframes and user-friendly interaction. (Edit this text with your real details.)",tags:["UI/UX","Wireframes","Responsive design"],logo:"ux",glow:"#a855f7"}];
 
+const LOGOS={velnora:`<svg class="logo-svg" viewBox="0 0 120 120" role="img" aria-label="Velnora logo" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="0.55" stop-color="#d946ef"/><stop offset="1" stop-color="#f59e0b"/></linearGradient><clipPath id="cv"><rect width="120" height="120" rx="26"/></clipPath><linearGradient id="shv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".55"/></linearGradient></defs><rect width="120" height="120" rx="26" fill="url(#bgv)"/><g clip-path="url(#cv)"><path d="M24 32H50L66 82L52 94Z" fill="url(#shv)" opacity=".95"/><path d="M96 32H70L54 82L68 94Z" fill="#fff" opacity=".5"/><path d="M50 32L66 82L54 82Z" fill="#000" opacity=".18"/><path d="M92 14l3.2 9.8L105 27l-9.8 3.2L92 40l-3.2-9.8L79 27l9.8-3.2Z" fill="#fff"/><ellipse cx="60" cy="14" rx="52" ry="26" fill="#fff" fill-opacity=".2"/></g><rect x=".75" y=".75" width="118.5" height="118.5" rx="25.5" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.5"/></svg>`,signup:`<svg class="logo-svg" viewBox="0 0 120 120" role="img" aria-label="Signup logo" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="0.5" stop-color="#06b6d4"/><stop offset="1" stop-color="#2563eb"/></linearGradient><clipPath id="cs"><rect width="120" height="120" rx="26"/></clipPath><linearGradient id="shs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".55"/></linearGradient></defs><rect width="120" height="120" rx="26" fill="url(#bgs)"/><g clip-path="url(#cs)"><circle cx="56" cy="42" r="15" fill="url(#shs)"/><path d="M24 92C24 72 38 63 56 63S88 72 88 92Z" fill="url(#shs)" opacity=".92"/><circle cx="88" cy="86" r="19" fill="#0b1222" opacity=".35"/><circle cx="88" cy="83" r="18" fill="#22e08a" stroke="#fff" stroke-width="3"/><path d="M79 83l7 7 12-14" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M94 22v18M85 31h18" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/><ellipse cx="60" cy="14" rx="52" ry="26" fill="#fff" fill-opacity=".2"/></g><rect x=".75" y=".75" width="118.5" height="118.5" rx="25.5" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.5"/></svg>`,ux:`<svg class="logo-svg" viewBox="0 0 120 120" role="img" aria-label="UX Project logo" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ec4899"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#4f46e5"/></linearGradient><clipPath id="cu"><rect width="120" height="120" rx="26"/></clipPath><linearGradient id="shu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity=".55"/></linearGradient></defs><rect width="120" height="120" rx="26" fill="url(#bgu)"/><g clip-path="url(#cu)"><rect x="20" y="36" width="58" height="44" rx="9" fill="#fff" opacity=".28"/><rect x="28" y="28" width="58" height="44" rx="9" fill="#fff" opacity=".9"/><rect x="35" y="36" width="24" height="6" rx="3" fill="#a855f7"/><rect x="35" y="48" width="42" height="4" rx="2" fill="#c4b5fd"/><rect x="35" y="57" width="30" height="4" rx="2" fill="#c4b5fd"/><path d="M26 98C40 78 58 104 76 86" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="26" cy="98" r="4" fill="#fff"/><circle cx="76" cy="86" r="4" fill="#fff"/><path d="M70 58v36l9-8 6 14 7-3-6-14h12Z" fill="#0b1222" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M98 20l3 7 8 .8-6 5 2 8-7-4-7 4 2-8-6-5 8-.8Z" fill="#fde047"/><ellipse cx="60" cy="14" rx="52" ry="26" fill="#fff" fill-opacity=".2"/></g><rect x=".75" y=".75" width="118.5" height="118.5" rx="25.5" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.5"/></svg>`};
+const logoOf=p=>`<span class="logo-tile" style="--glow:${p.glow||'#2d7bff'}">${LOGOS[p.logo]||`<b class="fb">${p.t.charAt(0)}</b>`}</span>`;
 const $=s=>document.querySelector(s);
 const waUrl=/^\d{8,15}$/.test(CFG.whatsapp)?"https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(CFG.waText):"#contact";
 document.querySelectorAll("[data-wa]").forEach(a=>a.href=waUrl);
@@ -164,19 +160,14 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 
 $("#skillGrid").innerHTML=SKILLS.map(s=>`<div class="card"><div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join("");
 $("#serviceGrid").innerHTML=SERVICES.map(s=>`<div class="card"><div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><ul>${s[3].map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn" href="#contact">Discuss Your Project</a></div>`).join("");
-
-$("#projGrid").innerHTML=PROJECTS.map((p,i)=>`<article class="card proj"><button class="thumb" data-i="${i}" aria-label="Open ${esc(p.t)} details"><img src="${p.img}" alt="${esc(p.t)} screenshot" loading="lazy" onerror="this.replaceWith(document.createTextNode('${esc(p.t.charAt(0))}'))"></button><div class="pb"><div class="cat">${p.c}</div><h3>${p.t}</h3><p>${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row"><button class="btn" data-i="${i}">View Details</button></div></div></article>`).join("");
+$("#projGrid").innerHTML=PROJECTS.map((p,i)=>`<article class="card proj"><button class="thumb" data-i="${i}" aria-label="Open ${esc(p.t)} details"><img src="${p.img}" alt="${esc(p.t)} screenshot" loading="lazy" onerror="this.replaceWith(document.createTextNode('${esc(p.t.charAt(0))}'))"></button><div class="pb"><div class="phead">${logoOf(p)}<div><div class="cat">${p.c}</div><h3>${p.t}</h3></div></div><p>${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row"><button class="btn" data-i="${i}">View Details</button></div></div></article>`).join("");
 
 const LINKS=[["WhatsApp",waUrl],["Fiverr",CFG.fiverr],["Upwork",CFG.upwork],["LinkedIn",CFG.linkedin],["GitHub",CFG.github]].filter(l=>l[1]);
 $("#linkCol").innerHTML=LINKS.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener noreferrer"><span>${l[0]}</span><span>↗</span></a>`).join("");
 $("#footLinks").innerHTML=LINKS.slice(1).map(l=>`<a href="${l[1]}" target="_blank" rel="noopener noreferrer">${l[0]}</a>`).join("");
 
 const modal=$("#modal");
-function openP(i){
- const p=PROJECTS[i];
- $("#mc").innerHTML=`<img src="${p.img}" alt="${esc(p.t)} screenshot" onerror="this.remove()"><div class="cat">${p.c}</div><h3 style="font-size:22px;margin-bottom:8px">${p.t}</h3><p class="muted">${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row" style="margin-top:16px">${p.link?`<a class="btn p" href="${p.link}" target="_blank" rel="noopener noreferrer">Open Project</a>`:""}<a class="btn" href="#contact" onclick="closeP()">Ask About This Project</a></div>`;
- modal.classList.add("open");$("#mx").focus();
-}
+function openP(i){const p=PROJECTS[i];$("#mc").innerHTML=`<img src="${p.img}" alt="${esc(p.t)} screenshot" onerror="this.remove()"><div class="phead">${logoOf(p)}<div><div class="cat">${p.c}</div><h3 style="font-size:22px">${p.t}</h3></div></div><p class="muted">${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row" style="margin-top:16px">${p.link?`<a class="btn p" href="${p.link}" target="_blank" rel="noopener noreferrer">Open Project</a>`:""}<a class="btn" href="#contact" onclick="closeP()">Ask About This Project</a></div>`;modal.classList.add("open");$("#mx").focus()}
 function closeP(){modal.classList.remove("open")}
 $("#projGrid").addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(b)openP(+b.dataset.i)});
 $("#mx").onclick=closeP;modal.addEventListener("click",e=>{if(e.target===modal)closeP()});
@@ -198,6 +189,13 @@ $("#form").addEventListener("submit",e=>{
  window.open("https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(text),"_blank","noopener");
  m.className="msg ok";m.textContent="WhatsApp is opening with your message ready. Press Send there to deliver it.";
 });
+
+/* gentle 3D tilt that follows the pointer (desktop only) */
+if(matchMedia("(hover:hover) and (pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches){
+ document.addEventListener("pointermove",e=>{const c=e.target.closest&&e.target.closest(".card");if(!c)return;
+  const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  c.style.setProperty("--hy",(x*10).toFixed(2)+"deg");c.style.setProperty("--hx",(-y*10).toFixed(2)+"deg")});
+}
 </script>
 </body>
 </html>

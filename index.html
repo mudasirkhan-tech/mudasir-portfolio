@@ -22,7 +22,7 @@
 
 <main>
 <section class="hero" id="home">
-  <div class="hero-bg"><img src="./images/profile.jpg" alt="Mudasir Khan-Tech" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="mk grad">MK</div></div>
+  <div class="hero-bg"><img src="./profile.jpg" alt="Mudasir Khan-Tech" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="mk grad">MK</div></div>
   <div class="wrap"><div class="hero-copy">
     <div class="avail">Available for freelance projects</div>
     <p class="sub">Full-Stack AI Developer</p>
@@ -113,7 +113,7 @@
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project details"><div class="mbox"><button class="mx" id="mx" aria-label="Close">✕</button><div id="mc"></div></div></div>
 
 <script>
-/* ===== EDIT HERE: links and WhatsApp (digits only, country code, no + or spaces) ===== */
+/* WhatsApp digits only: country code, no + or spaces */
 const CFG={
  whatsapp:"923429358188",
  waText:"Hi Mudasir, I found your portfolio and I'd like to discuss a project.",
@@ -122,7 +122,7 @@ const CFG={
  fiverr:"https://www.fiverr.com/mudasirkhan_ai",
  upwork:"https://www.upwork.com/freelancers/~01a8ea6d6f2149d63a"
 };
-/* ===== EDIT HERE: skills ===== */
+
 const SKILLS=[
 ["🤖","Artificial Intelligence","AI integration, deep learning concepts and image processing, used in my chatbot projects."],
 ["💬","AI Chatbots & Bots","Conversational assistants that answer questions, handle files and images, and chat in real time."],
@@ -133,7 +133,7 @@ const SKILLS=[
 ["🔥","Firebase","Hosting and web-app support with Firebase tools."],
 ["📄","Document Q&A","Tools that let users ask questions about documents and PDF files."],
 ["🧩","Problem Solving","Step-by-step thinking and debugging to turn ideas into working software."]];
-/* ===== EDIT HERE: services ===== */
+
 const SERVICES=[
 ["🤖","AI Chatbot Development","Chatbots and AI assistants that answer questions, process images and accept file uploads.",["Customer support bots","Assistants with file and image input","Ollama and AI model integration"]],
 ["⚙️","AI Automation","Automation that removes repetitive tasks and connects your tools into one workflow.",["Task and workflow automation","Bots for platforms and messaging","Productivity tools"]],
@@ -141,12 +141,20 @@ const SERVICES=[
 ["🖥️","Desktop Applications","Desktop software for tasks that need to run on your own computer.",["Custom desktop tools","Offline-friendly apps","Simple, clear interfaces"]],
 ["🗄️","Database & Management Systems","Systems to store, search and manage business data in one place.",["Database design","Management systems","Admin dashboards"]],
 ["💼","Professional Business Websites","Websites that present your company and bring customers in to contact you.",["Service and contact pages","Clean branding","Ready for GitHub Pages or hosting"]]];
-/* ===== EDIT HERE: projects (image paths are inside the images folder; link "" = no link button) ===== */
+
+/*
+  IMPORTANT: These image files must be in the repository root beside index.html:
+  profile.jpg, onyx.jpg, freelance-os.jpg, synapto.jpg
+  The repository screenshot showed these files in the root, not in an images folder.
+  Add ux.jpg, signup.jpg and velnora.jpg to the repository root before using them here.
+*/
 const PROJECTS=[
-{t:"Onyx",c:"AI Chatbot",img:"./images/onyx.jpg",link:"",d:"Onyx is a professional AI chatbot. It answers questions much like ChatGPT, processes images, and lets you upload files and talk with it. It replies quickly and handles all kinds of questions.",tags:["AI chat","Image processing","File upload","Fast replies"]},
-{t:"Freelance Operating System",c:"AI Automation / Freelancing",img:"./images/freelance-os.jpg",link:"",d:"A system that finds work for you on Upwork and Fiverr, brings in people and links you with jobs. It also works on GitHub and LinkedIn, sharing posts on your behalf.",tags:["Upwork","Fiverr","LinkedIn","GitHub","Automation"]},
-{t:"Synapto",c:"AI Chatbot",img:"./images/synapto.jpg",link:"",d:"Synapto is an AI chatbot connected with Ollama. It includes AI deep learning and integration, answers any question like ChatGPT, Gemini or Claude, processes images and generates images.",tags:["Ollama","Deep learning","Image processing","Image generation"]},
-{t:"Velnora",c:"Business Website",img:"./images/velnora.jpg",link:"",d:"A business website platform where you can set up your company and attract customers. Customers can contact you directly through the site.",tags:["Business website","Customer contact","Responsive"]}];
+{t:"Onyx",c:"AI Chatbot",img:"./onyx.jpg",link:"",d:"Onyx is a professional AI chatbot. It answers questions much like ChatGPT, processes images, and lets you upload files and talk with it. It replies quickly and handles all kinds of questions.",tags:["AI chat","Image processing","File upload","Fast replies"]},
+{t:"Freelance Operating System",c:"AI Automation / Freelancing",img:"./freelance-os.jpg",link:"",d:"A system that finds work for you on Upwork and Fiverr, brings in people and links you with jobs. It also works on GitHub and LinkedIn, sharing posts on your behalf.",tags:["Upwork","Fiverr","LinkedIn","GitHub","Automation"]},
+{t:"Synapto",c:"AI Chatbot",img:"./synapto.jpg",link:"",d:"Synapto is an AI chatbot connected with Ollama. It includes AI deep learning and integration, answers questions like ChatGPT, Gemini or Claude, processes images and generates images.",tags:["Ollama","Deep learning","Image processing","Image generation"]},
+{t:"UX Project",c:"UI / UX Design",img:"./ux.jpg",link:"",d:"A user-interface project focused on a clear, consistent and easy-to-use experience.",tags:["UI/UX","User experience","Interface design"]},
+{t:"Sign-up Project",c:"Web App / UI",img:"./signup.jpg",link:"",d:"A sign-up interface designed to make account creation clear and easy for users.",tags:["Sign-up","Forms","User experience"]},
+{t:"Velnora",c:"Business Website",img:"./velnora.jpg",link:"",d:"A business website platform where you can set up your company and attract customers. Customers can contact you directly through the site.",tags:["Business website","Customer contact","Responsive"]}];
 
 const $=s=>document.querySelector(s);
 const waUrl=/^\d{8,15}$/.test(CFG.whatsapp)?"https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(CFG.waText):"#contact";
@@ -156,6 +164,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 
 $("#skillGrid").innerHTML=SKILLS.map(s=>`<div class="card"><div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join("");
 $("#serviceGrid").innerHTML=SERVICES.map(s=>`<div class="card"><div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><ul>${s[3].map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn" href="#contact">Discuss Your Project</a></div>`).join("");
+
 $("#projGrid").innerHTML=PROJECTS.map((p,i)=>`<article class="card proj"><button class="thumb" data-i="${i}" aria-label="Open ${esc(p.t)} details"><img src="${p.img}" alt="${esc(p.t)} screenshot" loading="lazy" onerror="this.replaceWith(document.createTextNode('${esc(p.t.charAt(0))}'))"></button><div class="pb"><div class="cat">${p.c}</div><h3>${p.t}</h3><p>${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row"><button class="btn" data-i="${i}">View Details</button></div></div></article>`).join("");
 
 const LINKS=[["WhatsApp",waUrl],["Fiverr",CFG.fiverr],["Upwork",CFG.upwork],["LinkedIn",CFG.linkedin],["GitHub",CFG.github]].filter(l=>l[1]);
@@ -163,7 +172,11 @@ $("#linkCol").innerHTML=LINKS.map(l=>`<a href="${l[1]}" target="_blank" rel="noo
 $("#footLinks").innerHTML=LINKS.slice(1).map(l=>`<a href="${l[1]}" target="_blank" rel="noopener noreferrer">${l[0]}</a>`).join("");
 
 const modal=$("#modal");
-function openP(i){const p=PROJECTS[i];$("#mc").innerHTML=`<img src="${p.img}" alt="${esc(p.t)} screenshot" onerror="this.remove()"><div class="cat">${p.c}</div><h3 style="font-size:22px;margin-bottom:8px">${p.t}</h3><p class="muted">${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row" style="margin-top:16px">${p.link?`<a class="btn p" href="${p.link}" target="_blank" rel="noopener noreferrer">Open Project</a>`:""}<a class="btn" href="#contact" onclick="closeP()">Ask About This Project</a></div>`;modal.classList.add("open");$("#mx").focus()}
+function openP(i){
+ const p=PROJECTS[i];
+ $("#mc").innerHTML=`<img src="${p.img}" alt="${esc(p.t)} screenshot" onerror="this.remove()"><div class="cat">${p.c}</div><h3 style="font-size:22px;margin-bottom:8px">${p.t}</h3><p class="muted">${p.d}</p><div class="chips">${p.tags.map(t=>`<span class="chip">${t}</span>`).join("")}</div><div class="row" style="margin-top:16px">${p.link?`<a class="btn p" href="${p.link}" target="_blank" rel="noopener noreferrer">Open Project</a>`:""}<a class="btn" href="#contact" onclick="closeP()">Ask About This Project</a></div>`;
+ modal.classList.add("open");$("#mx").focus();
+}
 function closeP(){modal.classList.remove("open")}
 $("#projGrid").addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(b)openP(+b.dataset.i)});
 $("#mx").onclick=closeP;modal.addEventListener("click",e=>{if(e.target===modal)closeP()});
